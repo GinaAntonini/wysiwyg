@@ -1,10 +1,23 @@
 
 /*DOM ELEMENTS*/
 
-.peopleObject {
-	display: inline-block;
+#inputField {
+	margin: 10% 50%;
+}
+.peopleCard {
+	width: 20%;
+	height: 35%;
+	border: 1px solid gray;
+	flex-direction: row;
+	float: right;
+	margin: 2%;
+}
+
+.containerForPeople {
+	display: flex;
 	flex-wrap: wrap;
-	border: 2px solid;
+	justify-content: center;
+	margin:  10%;
 }
 
 .name {
@@ -19,12 +32,11 @@
 
 .peopleBio {
 	font-size: 1em;
-	width: 45%;
 	margin: 2%;
 }
 
 .photos {
-  width: 20%;
+  width: 60%;
   margin: 1%;
   border-radius: 20%;
 }
@@ -32,4 +44,15 @@
 .lifespanOf, p {
 	font-size: 1em;
 	margin: 1%;
+	text-align: center;
 }
+
+
+/*CHANGE BACKGROUND COLORS*/
+
+.peopleCard:nth-of-type(even) {
+  background-color: lightyellow;
+}
+
+.peopleCard:nth-of-type(odd) {
+  background-color: lightblue;
