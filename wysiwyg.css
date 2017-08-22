@@ -1,0 +1,35 @@
+
+/*DOM ELEMENTS*/
+
+.peopleObject {
+	display: inline-block;
+	flex-wrap: wrap;
+	border: 2px solid;
+}
+
+.name {
+	font-size: 2em;
+	margin: 1%;
+}
+
+.title {
+	font-size: 1.5em;
+	margin: 1%;
+}
+
+.peopleBio {
+	font-size: 1em;
+	width: 45%;
+	margin: 2%;
+}
+
+.photos {
+  width: 20%;
+  margin: 1%;
+  border-radius: 20%;
+}
+
+.lifespanOf, p {
+	font-size: 1em;
+	margin: 1%;
+}
