@@ -46,32 +46,27 @@ var textInputArea = document.getElementById("inputField");
 var domString = document.getElementById("famousPeopleElement");
 
 for (var i = 0; i < famousPeople.length; i++) {
-  var peopleObject = famousPeople[i];
-  domString.innerHTML += `<div class="containerForPeople">`
-  domString.innerHTML += `<person id="peopleObject-${i}" class="peopleObject">`;
-  domString.innerHTML += `<header class="personsNameAndTitle>`;
-  domString.innerHTML += `<h1 class="name">${peopleObject.name}</h1>`;
-  domString.innerHTML += `<h2 class="title">${peopleObject.title}</h2>`;
-  domString.innerHTML += `</header>`;
-  domString.innerHTML += `<section>`;
-  domString.innerHTML += `<img class="photos" src="${peopleObject.image}">`;
-  domString.innerHTML += `<p class="peopleBio">${peopleObject.bio}</p>`;
-  domString.innerHTML += `</section> `;
-  domString.innerHTML += `<footer class="lifespanOf">`;
-  domString.innerHTML += `<p>Born: ${peopleObject.lifespan.birth}</p>`;
-  domString.innerHTML += `<p>Died: ${peopleObject.lifespan.death}</p>`;
-  domString.innerHTML += `</footer>`;
-  domString.innerHTML += `</person>`;
-  domString.innerHTML += `</div>`;
+  var peopleCard = famousPeople[i];
+domString.innerHTML += `<person id="peopleCard-${i}" class="peopleCard">
+<header class="personsNameAndTitle>
+<h1 class="name">${peopleCard.name}</h1>
+<h2 class="title">${peopleCard.title}</h2>
+</header>
+<section>
+<img class="photos" src="${peopleCard.image}">
+<p class="peopleBio">${peopleCard.bio}</p>
+</section>
+<footer class="lifespanOf">
+<p>Born: ${peopleCard.lifespan.birth}</p>
+<p>Died: ${peopleCard.lifespan.death}</p>
+</footer>
+</person>`
 }
-
 // For every even numbered element, have a light yellow background.
-
+//did this in css
 
 // For every odd numbered element, have a light blue background.
-
-
-// Each element's DOM structure should be as shown below.
+//did this in css
 
 
 // When you click on one of the person elements, a dotted border should appear around it.
