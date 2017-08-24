@@ -1,33 +1,55 @@
-
-/*DOM ELEMENTS*/
-
-#inputField {
-	margin: 10% 50%;
+body {
+	background-color: #b30086;
 }
-.peopleCard {
-	width: 20%;
-	height: 35%;
-	border: 1px solid gray;
-	flex-direction: row;
-	float: right;
-	margin: 2%;
+
+/*DOM ELEMENTS- CARDS: TITLES, NAMES, BIOS, PHOTOS*/
+
+#typeTextHere {
+	width: 75%;
+	height: 4em;
+	margin: 6% auto;
+	display: block;
+	background-color: white;
+    background-image: url('https://68.media.tumblr.com/avatar_f5c2d96131ee_128.png');
+    background-size: 50px 50px;
+    padding-left: 50px;
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    font-size: 1em;
+
 }
 
 .containerForPeople {
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	justify-content: center;
-	margin:  10%;
+	flex-direction: row;
+	margin: 1%;
 }
 
-.name {
-	font-size: 2em;
-	margin: 1%;
+.peopleCard {
+	width: 32%;
+	padding: 3px;
+	border-radius: 2% 20% 2% 20%;
+}
+
+#pageTitle {
+	text-align: center;
+	font-family: 'Sedgwick Ave', cursive;
+
 }
 
 .title {
-	font-size: 1.5em;
+	font-size: 1em;
+	font-family: 'Sedgwick Ave Display', cursive;
 	margin: 1%;
+	text-align: center;
+}
+
+.name {
+	font-size: 1em;
+	margin: 1%;
+	text-align: center;
 }
 
 .peopleBio {
@@ -36,9 +58,11 @@
 }
 
 .photos {
-  width: 60%;
+  width: 50%;
+  height: 250px;
   margin: 1%;
-  border-radius: 20%;
+  border-radius: 20% 5%;
+  float: left;
 }
 
 .lifespanOf, p {
@@ -51,8 +75,17 @@
 /*CHANGE BACKGROUND COLORS*/
 
 .peopleCard:nth-of-type(even) {
-  background-color: lightyellow;
+  background-color: #ffffcc;
 }
 
 .peopleCard:nth-of-type(odd) {
-  background-color: lightblue;
+  background-color: #48D1CC;
+}
+
+/*ADD BORDER*/
+
+.border {
+	border: 4px dotted #4dff88;
+}
+
+
