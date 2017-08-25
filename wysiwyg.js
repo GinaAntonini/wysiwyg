@@ -73,7 +73,7 @@ domString.innerHTML += `<person id="peopleCard-${i}" class="peopleCard">
 </header>
 <section>
 <img class="photos" src="${peopleCard.image}">
-<p class="peopleBio">${peopleCard.bio}</p>
+<p class="peopleBio" id="bio">${peopleCard.bio}</p>
 </section>
 <footer class="lifespanOf">
 <p>Born: ${peopleCard.lifespan.birth}</p>
@@ -101,8 +101,23 @@ function addAborder (event) {
   textInputArea.focus();
   }
 }
-
 // When there is a highlighted person element, and you begin typing in the input box, the person's biography should be immediately bound to what you are typing, letter by letter.
+var typeBio = document.getElementById("bio");
+
+textInputArea.addEventListener('keypress', function(e){
+    typeBio.innerHTML = e.target.value;
+  });
+
+function findBorderedPerson() {
+  for (var i = 0; i < peopleCardClassSelector.length; i++) {
+    if (peopleCardClassSelector[i].classList.contains("border")){
+
+      var borderedPerson = peopleCardClassSelector[i];
+  }
+}
+}
+
+
 
 
 // When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
