@@ -90,8 +90,13 @@ domString.innerHTML += `<person id="peopleCard-${i}" class="peopleCard">
 
 // When you click on one of the person elements, a dotted border should appear around it.
 // When you click on one of the person elements, the text input should immediately gain focus so that you can start typing.
+
+function eventListenerForBorder () {
 for (var i = 0; i < peopleCardClassSelector.length; i++) {
   peopleCardClassSelector[i].addEventListener("click", addAborder);
+}
+}
+eventListenerForBorder();
 
 function addAborder (event) {
   for (var j = 0; j < peopleCardClassSelector.length; j++){
@@ -100,25 +105,20 @@ function addAborder (event) {
   peopleCardClassSelector[this.id].classList.add("border");
   textInputArea.focus();
   }
-}
+
 // When there is a highlighted person element, and you begin typing in the input box, the person's biography should be immediately bound to what you are typing, letter by letter.
 
-textInputArea.addEventListener('keypress', function(e){
-    typeBio.innerHTML = e.target.value;
-  });
-
-var typeBio = document.getElementById("bio");
+textInputArea.addEventListener('keypress', findBorderedPerson);
 
 function findBorderedPerson() {
-  var borderedPerson = peopleCardClassSelector[i];
   for (var i = 0; i < peopleCardClassSelector.length; i++) {
     if (peopleCardClassSelector[i].classList.contains("border")){
-    findBorderedPerson.addEventListener('keypress', function(e){
-      typeBio.innerHTML = e.target.value;
-});
+      console.log(peopleCardClassSelector[i]);
+       peopleCardClassSelector[i].children[1].children[1].innerHTML = textInputArea.value;
+};
 }
 }
-}
+findBorderedPerson();
 
 
 // When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
@@ -126,7 +126,6 @@ function enterKey (event) {
     var code = event.charCode || event.keyCode;
       if (code === 13) {
         textInputArea.value = "";
-        typeBio.value = "";
   }
 };
 
